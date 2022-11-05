@@ -67,6 +67,11 @@ https://spectacular-youtiao-ef9567.netlify.app/index.html
 
   <br>
 
+  <img src="/img/card.png" alt="" />  
+  
+  
+  <br>
+
 
 
 
