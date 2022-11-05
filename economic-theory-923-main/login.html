@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    *{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+#back{
+    /* background-image: url(https://w7.pngwing.com/pngs/221/382/png-transparent-assorted-medicines-capsule-color-capsule-pills-miscellaneous-color-splash-photography.png); */
+background-image: url(https://img.lovepik.com/background/20211022/large/lovepik-medical-background-image_500943847.jpg);
+    width: 99%;
+            margin-top:0px;
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 800px;
+            position: absolute;
+        }
+
+#main{
+position: absolute;
+/* border: 2px solid red; */
+height: 500px;
+width: 50%;
+margin-left: 540px;
+margin-top: 100px;
+background-color: #24aeb1;
+border-radius: 40%;
+
+
+}
+
+#form{
+
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-color: aliceblue;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 10%;
+
+  }
+
+input{
+width: 80%;
+padding: 20px;
+margin-top: 20px;
+
+}
+
+#para{
+display: block;
+padding: 20px;
+margin-top: 20px;
+border-radius: 5%;
+background-color:#24aeb1 ;
+cursor: pointer;
+border: none;
+color: white;
+}
+
+#para:hover{
+    background-color: pink;
+    cursor: pointer;
+}
+h2{
+    color: #24aeb1;
+}
+
+</style>
+<body>
+    <div id="back"></div>
+    <div id="main">
+   
+
+    <form id="form">
+    <h2>Login</h2>
+    <input id="email" type="email" name="email" placeholder="Email address"> <br>
+    <input id="pass" type="password" placeholder="Password"> <br>
+    <input type="submit" value="Sign in" id="para">
+</form>
+
+
+
+</div>
+</div>
+</body>
+</html>
+<script>
+    
+
+
+document.querySelector("form").addEventListener("submit", loginFun);
+    var regdUsers = JSON.parse(localStorage.getItem("userCreds"));
+    
+    function loginFun(){
+        event.preventDefault();
+        var enteredEmail = document.querySelector("#email").value;
+        var enteredPass = document.querySelector("#pass").value;
+        console.log(email,pass);
+
+        if(enteredEmail == "" || enteredPass == ""){
+            alert("Enter all details")
+        }else{
+            var flag = false;
+            for(var i=0; i<regdUsers.length; i++){
+                console.log(regdUsers[i]);
+                if(regdUsers[i].email == enteredEmail && regdUsers[i].password == enteredPass){
+                    console.log("Login success");
+                    flag = true;
+                    alert("Login success")
+                    window.location.href = "./index.html"
+                    break;
+                }
+            }
+            if(!flag){
+                console.log("login failed")
+                alert("login failed");
+            }
+        }
+               
+    }
+
+
+
+
+</script>

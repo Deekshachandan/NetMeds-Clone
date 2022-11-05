@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="./other.css">
+</head>
+<style>
+    form {
+        display: block;
+        padding: 15px;
+    }
+
+    input {
+        padding: 20px;
+        margin-top: 15px;
+
+    }
+
+    #form1 {
+        width: 300px;
+margin: auto;
+        min-height: 250px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        padding: 20px;
+      background-color:#34d9dc;
+       
+
+
+    }
+
+    #submit {
+        background-color:red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+
+    }
+#submit:hover{
+    background-color:green;
+}
+
+    #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+     width: 93%;
+   
+        gap: 20px;
+    
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    }
+
+    #container img {
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+
+    #box {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    #btn {
+        display: block;
+        padding: 10px;
+        background-color:
+     #24aeb1;
+        color: white;
+        margin: auto;
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    #container p {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    strike {
+        text-decoration: line-through;
+        text-align: center;
+    }
+
+    #slider{
+    width: 100%;
+    margin-left: 0;
+    margin: auto;
+
+    
+}
+#slider img{
+    display: block;
+    margin: auto;
+}
+
+
+#main{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+}
+#pay{
+    display: block;
+        padding: 10px;
+        background-color:
+     #24aeb1;
+        color: white;
+        margin: auto;
+        border: none;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+
+}
+ #pay:hover{
+    background-color: pink;
+ }
+
+body{
+    background-color: #f3f3f3;
+}
+
+ form label{
+    color:red;
+
+ }
+</style>
+
+<body>
+    <div id="navbar"></div>
+
+
+<div id="main">
+
+    <div id="slider">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img
+                    src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1657910211_Netmeds_Cat_1000X200_Melts_Range.jpg">
+            </div>
+
+            <div class="mySlides fade">
+
+                <img
+                    src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1655922405_Healthvit-netmeds-Category_web.jpg">
+
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1659371634_Nutra-banner.jpg">
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+
+
+    <div id="form1">
+        <form id="form">
+            <label for="">Enter Promo code to get 30% discount</label> <br>
+            <input id="promo" type="password" name="promo" placeholder="Enter Promo code"> <br>
+            <input type="submit" value="Apply Promo" id="submit">
+        </form>
+    </div>
+    <p id="displayValue" style="color: green; text-align:center; font-size: 20px";></p>
+    <button id="pay"> Proceed Payment</button>
+    <div id="container"></div>
+   
+</div>
+</body>
+
+</html>
+<script type="module">
+
+import header from "./components/header.js"
+document.getElementById('navbar').innerHTML = header()
+
+
+
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+
+
+
+let data = JSON.parse(localStorage.getItem("cart")) 
+    console.log(data)
+
+    var total = data.reduce(function (sum, el, index, arr) {
+        return sum + Number(el.price)
+        
+    }, 0);
+console.log(total)
+
+var length = data.length
+
+
+
+    document.getElementById("form").addEventListener("submit", function () {
+        event.preventDefault();
+        var code = document.getElementById("promo").value;
+        applyPromo(code);
+    });
+
+    function applyPromo(code) {
+        code = code.trim();
+        if (code == "netmeds01") {
+            localStorage.setItem("userPromo", code)
+            alert("Hurray you got 30% discount")
+            document.getElementById("form").reset();
+        } else if (code == "") {
+            alert("Please Enter Promo code")
+        } else if (code != "netmeds01") {
+            alert("Please Enter valid Promo code")
+        }
+        displayTotal(length, total);
+        window.location.reload();
+    }
+
+
+    total = displayTotal(length, total);
+
+    function displayTotal(length, total) {
+        var userPromo = localStorage.getItem("userPromo");
+        console.log("userPromo")
+        if (userPromo != null) {
+            total = (total * 70) / 100;
+        }
+
+        document.getElementById("displayValue").innerText = `You have ${length} items in cart and Total is Rs ${total}`
+        return total;
+    }
+
+
+    let container = document.getElementById("container")
+    container.innerHTML = null
+
+    data.forEach(el => {
+        let div = document.createElement("div")
+        div.setAttribute("id", "box")
+
+        let img = document.createElement("img")
+        img.src = el.image;
+
+        let name = document.createElement("p")
+        name.innerText = el.name;
+
+        let price = document.createElement("p")
+        price.innerText =` Rs:- ${el.price}`;
+
+        // let striked = document.createElement("strike")
+        // striked.innerText =  `Rs:-${el.striked}`;
+
+
+        let button = document.createElement("button")
+        button.setAttribute("id", "btn")
+        button.innerText = "Remove"
+        button.addEventListener("click", function () {
+            removeItem(el);
+        })
+        div.append(img, name, price, button)
+        container.append(div)
+    });
+
+    function removeItem(el, index) {
+        console.log(el, index);
+        data.splice(index, 1)
+        console.log(data);
+        localStorage.setItem("cart", JSON.stringify(data));
+        window.location.reload();
+    }
+
+
+
+
+
+
+    document.getElementById("pay").addEventListener("click",function(){
+        event.preventDefault();
+        window.location.reload();
+        checkoutPayment(total)
+    });
+    function checkoutPayment(total){
+        localStorage.setItem("total",total)
+        window.location.href = "checkout.html";
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>

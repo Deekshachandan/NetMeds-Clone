@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+</head>
+<style>
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f6f6f7;
+}
+
+
+#back{
+    background-image: url(https://wallpaperaccess.com/full/186176.png);
+    width: 99%;
+            margin-top:0px;
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            bottom: 0;
+            height: 800px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        
+}
+#main{
+position: absolute;
+margin: auto;
+margin-left: 150px;
+/* border: 2px solid black; */
+    display: grid;
+    width:80%;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    left:50px;
+}
+
+#form{
+    padding:40px;
+    /* border: 1px solid blue; */
+    display: block;
+    height: 550px;
+    width: 60%;
+    margin-left :20%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #f6f6f7;
+    margin-top: 23px;
+}
+input{
+    display: block;
+    padding: 20px;
+    margin-top: 5px;
+      width: 100%;
+  
+}
+
+#image{
+    width:150%;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+#submit{
+    display: block;
+background-color: #24aeb1;
+color: white;
+font-weight: bold;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 40px;
+    border: none;
+} 
+
+#submit:hover{
+    background-color: pink;
+    cursor: pointer;
+}
+
+#one{
+/* border: 1px solid red; */
+background-color: #24aeb1;
+}
+h2{
+margin-top: 2px;
+text-align: center;
+font-size: medium;
+font-style: italic;
+color: #24aeb1
+}
+#sign{
+text-align: center;
+font-size: medium;
+font-style: italic;
+color: #24aeb1
+}
+</style>
+<body>
+
+    <div id="back"></div>
+ 
+   <div id="main">
+
+<div id="image">
+    <img src="https://www.netmeds.com/images/cms/wysiwyg/cms/1588773798_sign-in-banner-new.png" alt="">
+</div>
+
+<div id="one">
+<form id="form">
+    <h2>Create an account / Sign-Up</h2>
+    <input id="email" type="email" name="email" placeholder="Email address"> <br>
+     <input id="name" type="text" name="name" placeholder="First name"><br>
+     <input id="LastName" type="Lasttext" name="LastName" placeholder="Last name"><br>
+    <input id="pass" type="password" placeholder="Password"> 
+    <input type="submit" name="" id="submit">
+</form>
+</div>
+</div>
+
+</body>
+</html>
+<script>
+
+
+
+document.querySelector("form").addEventListener("submit",ContinueFun);
+    let userData = JSON.parse(localStorage.getItem("userCreds")) || [];
+    function ContinueFun(){
+        event.preventDefault();
+
+        var userObj = {
+            email:document.querySelector("#email").value,
+            name:document.querySelector("#name").value,
+            LastName:document.querySelector("#LastName").value,
+            password:document.querySelector("#pass").value
+        };
+        console.log(userObj);
+        if(userObj.email == "" || userObj.name == "" || userObj.LastName == "" || userObj.password == ""){
+            alert("Enter All details first");
+        } 
+        else {
+            userData.push(userObj);
+
+            localStorage.setItem("userCreds",JSON.stringify(userData))
+            alert("Sign Up Successfully")
+            window.location.href = "login.html";
+            document.querySelector("form").reset();
+        }
+    }
+
+
+
+
+
+
+</script>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devices</title>
+    <link rel="stylesheet" href="./other.css">
+</head>
+<style>
+       body{
+        background-color: #f3f3f3;
+    } 
+#slider{
+    width: 100%;
+    height: 100%;
+  
+    margin-top: 50px;
+}
+body{
+        background-color: #f3f3f3;
+    }
+#one{
+
+margin-top: 50px;
+}
+
+#one img{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+#container{
+  margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+#container img {
+width: 50%;
+display: block;
+margin: auto;
+}
+
+#box{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+#btn{
+    display: block;
+    padding: 10px;
+    background-color: 
+#24aeb1;
+color: white;
+margin: auto;
+border: none;
+margin-bottom: 20px;
+}
+
+#container p{
+text-align: center;
+font-weight: bold;
+}
+
+strike{
+    text-decoration: line-through
+}
+
+#filter{
+    margin-left: 450px;
+    padding: 20px;
+
+}
+
+select{
+    padding: 20px;
+    background-color: #24aeb1;
+    color: #f3f3f3;
+    font-weight: bold;
+    border: none;
+}
+
+</style>
+<body>
+    <div id="navbar"></div>
+
+
+    <div id="slider">
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+         <img src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1660068423_1000x200.png" style="width:100%">
+       
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1657529075_Web-1000x200.jpg" style="width:100%">
+       </div>
+    </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+         </div>
+         </div>
+<div id="main">
+    <div id="filter">
+        <select id="sortPrice" onchange="handleByPrice()">
+          <option value="">Sort By Price</option>
+          <option value="HTL">High to Low</option>
+          <option value="LTH">Low to High</option>
+        </select>
+            
+        <select id="sortNames" onchange="handleByName()">
+            <option value="">Sort By Name</option>
+            <option value="asc">Ascending</option>
+            <option value="dec">Descending</option>
+            </select>
+        </div>
+
+
+    <div id="container"></div>
+    
+</div>
+
+<div id="footer"></div>
+
+
+</body>
+</html>
+<script type="module" src="./devices.js">
+
+    
+
+
+
+
+
+
+
+
+</script>

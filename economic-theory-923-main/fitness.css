@@ -1,0 +1,171 @@
+#fitness_page{
+    width: 100%;
+    /* margin-left: 40%; */
+}
+#fitness_page > h5 {
+    font-weight: 550;
+    color: grey;
+}
+.fitness_slider{
+    width: 100%;
+    
+}
+.fitness_slides{
+   display: none;
+   transition: all 750ms ease;
+   width: 100%;
+   height: 100%;
+}
+.fitness_slides img{
+    border-radius: 12px;
+    width:100%;
+}
+#fitness_shop_by_category {
+    width: 70%;
+    display: flex;
+ 
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#fitness_shop_by_category img{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+#fitness_shop_by_category div{
+    width: 15%;
+    text-align: center;
+    font-size: x-small; 
+    border: 0.5px solid rgb(153, 150, 150);
+    border-radius: 12px;
+    padding: 2% 0 2% 0 ;
+}
+#fitness_items{
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+}
+#fitness_items div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#fitness_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+#fitness_container div{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    padding: 3%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#fitness_container p{
+    font-size: smaller;
+}
+#fitness_container img{
+    margin: auto;
+}
+#fitness_container button{
+    background-color: teal;
+  color: white;
+  border: none;
+  padding: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 7px;
+}
+#fitness_container button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+#fitness_filter_options{
+    width: 54%;
+    display: flex;
+    justify-content: space-between;
+    font-size: xx-small;
+}
+#fitness_filter_options div{
+    border-radius: 10px;
+    padding: 0.5%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
+#fitness_filter_options div:hover{
+    cursor: pointer;
+}
+#fitness_container1{
+    margin-top: 2%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:12px;
+}
+#fitness_container1 div{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    padding: 3%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#fitness_container1 p{
+    font-size: smaller;
+}
+#fitness_container1 img{
+    margin: auto;
+}
+#fitness_container1 button{
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 7px;
+}
+#fitness_container1 button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+#fitness_pages{
+    
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    margin: auto;
+    margin-top: 2%;
+    
+}
+#fitness_pages span{
+    color: teal;
+}
+#fitness_pages p{
+    padding: 5%;
+}
+#fitness_pages p:hover{
+    cursor: pointer;
+    color: teal;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+}
+#fitness_pages button{
+  padding-top: 0%;
+  padding-bottom: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#fitness_pages button:hover{
+    cursor: pointer;
+    color: teal;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    border: none;
+}

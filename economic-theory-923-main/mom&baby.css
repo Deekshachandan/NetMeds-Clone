@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+#mombaby {
+    background-color: #f3f3f3;
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+/* #catagory_hiru {
+    width: 10%;
+} */
+#mom_prod {
+    width: 100%;
+}
+  #image_hiru2 {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  #image_hiru2 > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  #glasses_hiru3 {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  #glasses_hiru4 {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    background-color: white;
+  }
+  #glasses_hiru4 > div {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+    
+  }
+  .glasses_img1 > img {
+    width: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+  }
+  .glasses_img1 {
+    width: 100%;
+    height: 80%;
+  }
+  .glasses_p1 {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    
+    
+  }
+
+  #momBrand {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    background-color: white;
+  }
+  #momBrand img {
+    display: block;
+    margin: auto;
+  }
+  #momBrand > div {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+  }
+  #momBrand button {
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding: 5px;
+    background-color: #32aeb1;
+    border: 0px;
+    color: white;
+    border-radius: 4px;
+  }
+
+  #filter_div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  #filter {
+    padding: 5px
+  }

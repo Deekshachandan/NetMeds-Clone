@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.heading {
+    padding: 2% 15%;
+}
+#first-container {
+    display: flex;
+   
+    justify-content: space-between;
+  
+    height:auto;
+    padding:0 15%;
+}
+
+.links > span >a  {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 40px;
+    color:#151b39;
+    font-weight: 400;
+    font-style: normal;
+    font-family: Lato;
+    margin:0 1px;
+    background-color: white;
+    padding:10px 12px;
+    border-radius: 5px;
+}
+
+.search-box > input {
+    padding:10px;
+    margin-right:110px;
+    width:95%;
+    
+}
+
+#second-container {
+    display: flex;
+    width:100%;
+    margin-top:15px;
+    padding:0 15%;
+    /* background-color: #f3f3f3; */
+
+   
+}
+
+.first ,.second,.third {
+    width:25%;
+     margin:0 5px;
+    
+
+}
+
+.first-div>img ,.second-div>img ,.third-div>img{
+    width:100%;
+    border-radius: 10px;
+}
+
+.first-div , .second-div, .third-div {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.first-div>h2 , .second-div>h2, .third-div>h2 {
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 26px;
+    
+    width:100%;
+    margin:8px;
+    
+
+
+
+    
+}
+
+
+.first-div>p, .second-div>p, .third-div>p {
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    color:gray;
+
+    margin:8px;
+   
+    
+}
+
+.forth {
+    font-family: LatoBold;
+    font-style: normal;
+    font-weight: 400;
+    color:rgba(21,27,57,0.6);
+    font-size:14px;
+    line-height: 16px;
+    padding:5%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin:0 10px;
+}
+
+.forth > p {
+    margin:10px 0px;
+}
+
+#third-container {
+    background-color: #eaeaeb;
+
+    padding:2% 15%;
+
+}
+
+.third-container-div {
+    /* border:1px solid teal; */
+    display: flex;
+    width:100%;
+}
+
+
+.third-first-div ,.third-second-div, .third-third-div {
+    width:50%;
+    margin:10px;
+}
+
+.third-first-div>img, .third-second-div>img ,.third-third-div>img{
+    width:100%;
+    border-radius: 5px;
+}
+
+.heading-part >h2{
+    font-family: LatoBold;
+    font-size:12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    margin:25px 0px;
+    color:#6F7284;
+}
+
+.heading-part >h3{
+    color:#151B39;
+    font-family: LatoBold;
+    font-size:20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 14px;
+    margin-bottom:10px;
+
+}
+
+.heading-part >p{
+    margin-top:40px;
+}
+
+.third-first-div > h3 , .third-second-div>h3, .third-third-div>h3 {
+    font-family: Lato;
+    font-size:18px;
+    line-height:25px;
+    color:#151B39;
+    margin-top:10px;
+} 
+
+.third-first-div > p , .third-second-div>p, .third-third-div>p {
+    font-family: Lato;
+    font-size:18px;
+    line-height:25px;
+    color:gray;
+    margin-top:10px; 
+}
