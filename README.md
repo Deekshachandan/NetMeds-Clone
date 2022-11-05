@@ -40,15 +40,33 @@ https://spectacular-youtiao-ef9567.netlify.app/index.html
 <img src="/img/beauty1.png" alt="" />  <br>
 
 
-<img src="/img/Diab.png" alt="" />  <br>
-<img src="/img/product.png" alt="" />  <br>
-<img src="/img/pro.png" alt="" />  <br>
-<img src="/img/sex.png" alt="" />  <br>
-<img src="/img/Signup.png" alt="" />  <br>
-<img src="/img/Login.png" alt="" />  <br>
-<img src="/img/cart.png" alt="" />  <br>
-<img src="/img/pay.png" alt="" />  <br>
-<img src="/img/pay.png" alt="" />  <br>
+<img src="/img/Diab.png" alt="" /> 
+
+ <br>
+<img src="/img/product.png" alt="" /> 
+
+ <br>
+<img src="/img/pro.png" alt="" />
+
+  <br>
+<img src="/img/sex.png" alt="" /> 
+
+ <br>
+
+<img src="/img/Signup.png" alt="" />
+
+  <br>
+<img src="/img/Login.png" alt="" /> 
+
+ <br>
+<img src="/img/cart.png" alt="" />  
+
+<br>
+<img src="/img/pay.png" alt="" />
+
+
+  <br>
+
 
 
 
