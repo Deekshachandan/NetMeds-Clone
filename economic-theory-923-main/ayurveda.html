@@ -22,7 +22,7 @@ margin-top: 50px;
   margin: auto;
 }
 #container{
-  margin: auto;
+     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     width: 100%;
@@ -76,6 +76,34 @@ select{
 }
 
 
+@media all and (min-width:480px) and (max-width:720px){
+    #container{
+     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+}
+
+@media all and (min-width:320px) and (max-width:479px){
+    #container{
+     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+}
+
+
+
 </style>
 <body>
   <div id="navbar">
@@ -88,19 +116,7 @@ select{
         <img src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1659375875_Plant-Range-Banner-2.jpg" alt="">
     </div>
 
-<div id="filter">
-<select id="sortPrice" onchange="handleByPrice()" >
-  <option value="">Sort By Price</option>
-  <option value="HTL">High to Low</option>
-  <option value="LTH">Low to High</option>
-</select>
-    
-<select id="sortNames"  onchange="handleByName()" >
-    <option value="">Sort By Name</option>
-    <option value="asc">Ascending</option>
-    <option value="dec">Descending</option>
-    </select>
-</div>
+
 
 <div id="container">   
 </div>

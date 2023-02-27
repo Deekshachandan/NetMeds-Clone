@@ -125,8 +125,8 @@ var x1 = setInterval(function(){
 }, 1000); 
 
 
-import footer from "./components/footer.js"
-import header from "./components/header.js"
+import footer from "./footer.js"
+import header from "./header.js"
 
 document.getElementById('footer').innerHTML = footer()
 document.getElementById('navbar').innerHTML = header()

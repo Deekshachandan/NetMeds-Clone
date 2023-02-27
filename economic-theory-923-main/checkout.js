@@ -1,7 +1,8 @@
+import header from "./header.js"
+document.getElementById('navbar').innerHTML = header()
 
-        import header from "./components/header.js"
-        document.getElementById('navbar').innerHTML = header()
-
+import footer from "./footer.js"
+document.getElementById('footer').innerHTML = footer()
 
 document.querySelector("form").addEventListener("submit", ProductList);
 let productArr = [];

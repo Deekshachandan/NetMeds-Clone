@@ -135,9 +135,9 @@ function addToCart(el){
         alert("Item added to cart");
     }
 
-    import header from "./components/header.js"
+    import header from "./header.js"
     document.getElementById('navbar').innerHTML = header()
     
-    import footer from "./components/footer.js"
+    import footer from "./footer.js"
     document.getElementById('footer').innerHTML = footer()
 

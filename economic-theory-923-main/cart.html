@@ -132,6 +132,37 @@ body{
     color:red;
 
  }
+
+
+ @media all and (min-width:480px) and (max-width:720px){
+    #container{
+     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+}
+
+@media all and (min-width:320px) and (max-width:479px){
+    #container{
+     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+}
+
+
+
+
 </style>
 
 <body>
@@ -183,13 +214,17 @@ body{
     <div id="container"></div>
    
 </div>
+<div id="footer"></div>
 </body>
 
 </html>
 <script type="module">
 
-import header from "./components/header.js"
+import header from "./header.js"
 document.getElementById('navbar').innerHTML = header()
+
+import footer from "./footer.js"
+document.getElementById('footer').innerHTML = footer()
 
 
 
